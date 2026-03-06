@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("/assets/fonts/PlayfairDisplay-VariableFont_wght.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("/assets/fonts/Outfit-VariableFont_wght.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+
+    /* Warm cream / ivory palette */
+    --background: 0.97 0.008 80;
+    --foreground: 0.18 0.018 50;
+
+    --card: 0.99 0.004 80;
+    --card-foreground: 0.18 0.018 50;
+
+    --popover: 0.99 0.004 80;
+    --popover-foreground: 0.18 0.018 50;
+
+    /* Terracotta / warm coral primary */
+    --primary: 0.56 0.14 38;
+    --primary-foreground: 0.99 0.004 80;
+
+    --secondary: 0.94 0.012 75;
+    --secondary-foreground: 0.22 0.022 50;
+
+    --muted: 0.93 0.01 75;
+    --muted-foreground: 0.52 0.02 60;
+
+    /* Warm sand accent */
+    --accent: 0.88 0.03 75;
+    --accent-foreground: 0.22 0.022 50;
+
+    --destructive: 0.55 0.22 27;
+    --destructive-foreground: 0.99 0 0;
+
+    --border: 0.88 0.015 75;
+    --input: 0.92 0.012 75;
+    --ring: 0.56 0.14 38;
+
+    --chart-1: 0.56 0.14 38;
+    --chart-2: 0.6 0.11 184;
+    --chart-3: 0.7 0.09 120;
+    --chart-4: 0.8 0.12 85;
+    --chart-5: 0.65 0.14 55;
+
+    --sidebar: 0.95 0.01 75;
+    --sidebar-foreground: 0.18 0.018 50;
+    --sidebar-primary: 0.56 0.14 38;
+    --sidebar-primary-foreground: 0.99 0.004 80;
+    --sidebar-accent: 0.9 0.015 75;
+    --sidebar-accent-foreground: 0.22 0.022 50;
+    --sidebar-border: 0.88 0.015 75;
+    --sidebar-ring: 0.56 0.14 38;
+  }
+
+  .dark {
+    --background: 0.15 0.015 45;
+    --foreground: 0.96 0.008 80;
+
+    --card: 0.2 0.018 45;
+    --card-foreground: 0.96 0.008 80;
+
+    --popover: 0.22 0.02 45;
+    --popover-foreground: 0.96 0.008 80;
+
+    --primary: 0.68 0.14 38;
+    --primary-foreground: 0.15 0.015 45;
+
+    --secondary: 0.25 0.02 45;
+    --secondary-foreground: 0.9 0.008 80;
+
+    --muted: 0.25 0.018 45;
+    --muted-foreground: 0.65 0.018 70;
+
+    --accent: 0.3 0.025 50;
+    --accent-foreground: 0.9 0.008 80;
+
+    --destructive: 0.65 0.22 27;
+    --destructive-foreground: 0.96 0 0;
+
+    --border: 0.3 0.02 50;
+    --input: 0.28 0.018 50;
+    --ring: 0.68 0.14 38;
+
+    --chart-1: 0.68 0.14 38;
+    --chart-2: 0.6 0.11 184;
+    --chart-3: 0.7 0.09 120;
+    --chart-4: 0.8 0.12 85;
+    --chart-5: 0.65 0.14 55;
+
+    --sidebar: 0.18 0.018 45;
+    --sidebar-foreground: 0.96 0.008 80;
+    --sidebar-primary: 0.68 0.14 38;
+    --sidebar-primary-foreground: 0.15 0.015 45;
+    --sidebar-accent: 0.25 0.02 45;
+    --sidebar-accent-foreground: 0.9 0.008 80;
+    --sidebar-border: 0.3 0.02 50;
+    --sidebar-ring: 0.68 0.14 38;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-outfit;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Safe area support */
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .mb-safe {
+    margin-bottom: env(safe-area-inset-bottom, 0px);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: "Playfair Display", serif;
+  }
+  .font-outfit {
+    font-family: "Outfit", sans-serif;
+  }
+}
